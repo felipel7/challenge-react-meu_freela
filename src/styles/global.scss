@@ -1,9 +1,55 @@
+$text-color-light: #fff;
+$text-color-dark: #333;
+
+// Soft reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+// Typography
+body,
+button,
+input {
+  color: $text-color-dark;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (max-width: 720px) {
+    font-size: 1.5rem; //15px
+  }
+
+  @media screen and (max-width: 1080px) {
+    font-size: 1.4rem; //14px
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $text-color-light;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+// Buttons
 button {
   cursor: pointer;
+}
+
+// Links
+a {
+  color: $text-color-light;
+  text-decoration: none;
 }

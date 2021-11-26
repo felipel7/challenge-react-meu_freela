@@ -1,0 +1,26 @@
+.headerContainer {
+  background: linear-gradient(180deg, #ee5253 0%, #d92223 100%);
+}
+
+.headerContent {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 0 2rem;
+  width: 100%;
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  > ul {
+    display: flex;
+    list-style: none;
+
+    li + li {
+      margin-left: 2rem;
+    }
+  }
+}
