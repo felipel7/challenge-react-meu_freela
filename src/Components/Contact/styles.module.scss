@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: center;
 
+  @media screen and(max-width: 720px) {
+    margin-bottom: 12rem;
+  }
+
   p {
     margin: 2.1rem 0 4rem;
   }
@@ -41,8 +45,11 @@
 
     button {
       background: #10ac84;
-      height: 6rem;
       max-width: 30rem;
+
+      @media screen and(max-width: 720px) {
+        align-self: center;
+      }
     }
   }
 }

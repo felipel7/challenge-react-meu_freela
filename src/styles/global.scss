@@ -51,10 +51,9 @@ button {
   max-height: 6rem;
   outline: none;
   overflow: hidden;
-  padding: 1.6rem 0;
+  padding: 1.6rem 6rem;
   transition: background-color 0.3s;
   white-space: nowrap;
-  width: 100%;
 }
 
 // Links
@@ -71,4 +70,5 @@ input {
   height: 6rem;
   line-height: 3rem;
   padding: 1.4rem;
+  flex: 1;
 }
