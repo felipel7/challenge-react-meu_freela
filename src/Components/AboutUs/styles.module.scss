@@ -1,9 +1,5 @@
 @import '../../styles/global.scss';
 
-* {
-  outline: 1px solid red;
-}
-
 .aboutUsContainer {
   position: relative;
 
@@ -38,11 +34,9 @@
 
   h2 {
     margin: 4.5rem 0 4rem;
-    color: $color-text-dark;
   }
 
   p {
-    color: $color-text-dark;
     max-width: 50rem;
     margin-right: 7.5rem;
   }

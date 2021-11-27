@@ -9,6 +9,10 @@ $color-accent: #ee5253;
   box-sizing: border-box;
 }
 
+::placeholder {
+  color: #bbb;
+}
+
 html {
   font-size: 62.5%; // 1rem = 10px
 }
@@ -29,17 +33,12 @@ input {
 h1,
 h2,
 h3 {
-  color: $color-text-light;
   font-size: 8rem;
   font-weight: bold;
 }
 
 h2 {
   font-size: 5rem;
-}
-
-p {
-  color: $color-text-light;
 }
 
 // Buttons
@@ -49,6 +48,7 @@ button {
   color: $color-text-light;
   cursor: pointer;
   line-height: 1.2;
+  max-height: 6rem;
   outline: none;
   overflow: hidden;
   padding: 1.6rem 0;
@@ -61,4 +61,14 @@ button {
 a {
   color: $color-text-light;
   text-decoration: none;
+}
+
+// Inputs
+input {
+  border-radius: 8px;
+  border: 1px solid #cdcdcd;
+  font-size: 1.8rem;
+  height: 6rem;
+  line-height: 3rem;
+  padding: 1.4rem;
 }
