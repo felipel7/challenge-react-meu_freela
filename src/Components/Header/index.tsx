@@ -1,6 +1,6 @@
 import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
 
-import styles from './header.module.scss';
+import styles from './styles.module.scss';
 
 const Header = () => {
   return (

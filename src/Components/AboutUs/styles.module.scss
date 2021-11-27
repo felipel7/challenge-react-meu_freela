@@ -1,0 +1,62 @@
+@import '../../styles/global.scss';
+
+* {
+  outline: 1px solid red;
+}
+
+.aboutUsContainer {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 11rem;
+    background: #eaeaea;
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.aboutUsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 1.6rem 0 1.6rem;
+  gap: 7.5rem;
+
+  margin: 0 auto;
+  max-width: 1020px;
+
+  @media screen and (min-width: 720px) {
+    flex-direction: row;
+    align-items: initial;
+  }
+
+  h2 {
+    margin: 4.5rem 0 4rem;
+    color: $color-text-dark;
+  }
+
+  p {
+    color: $color-text-dark;
+    max-width: 50rem;
+    margin-right: 7.5rem;
+  }
+
+  > picture {
+    display: block;
+    max-width: 41rem;
+    max-height: 46.6rem;
+
+    > img {
+      object-fit: scale-down;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
