@@ -1,5 +1,6 @@
 $text-color-light: #fff;
 $text-color-dark: #333;
+$color-accent: #ee5253;
 
 // Soft reset
 * {
@@ -21,6 +22,9 @@ input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  font-size: 2.2rem;
+  line-height: 1.2;
+
   @media screen and (max-width: 720px) {
     font-size: 1.5rem; //15px
   }
@@ -36,16 +40,29 @@ h3 {
   color: $text-color-light;
   font-size: 8rem;
   font-weight: bold;
-  line-height: 1.2;
 }
 
 h2 {
   font-size: 5rem;
 }
 
+p {
+  color: $text-color-light;
+}
+
 // Buttons
 button {
+  border-radius: 8px;
+  border: none;
+  color: $text-color-light;
   cursor: pointer;
+  line-height: 1.2;
+  outline: none;
+  overflow: hidden;
+  padding: 1.6rem 0;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  width: 100%;
 }
 
 // Links

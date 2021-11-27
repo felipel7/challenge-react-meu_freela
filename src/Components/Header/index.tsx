@@ -10,17 +10,17 @@ const Header = () => {
 
         <ul>
           <li>
-            <a href='https://www.linkedin.com'>
+            <a href='https://www.linkedin.com' title='linkedin profile'>
               <FaLinkedinIn size={32} />
             </a>
           </li>
           <li>
-            <a href='https://www.instagram.com'>
+            <a href='https://www.instagram.com' title='instagram profile'>
               <FaInstagram size={32} />
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com'>
+            <a href='https://www.twitter.com' title='twitter profile'>
               <FaTwitter size={32} />
             </a>
           </li>
