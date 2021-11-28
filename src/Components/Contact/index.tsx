@@ -31,7 +31,11 @@ const Contact = () => {
   };
 
   return (
-    <section id='form' className={styles.contactContainer}>
+    <section
+      id='form'
+      data-aos='zoom-in-up'
+      className={styles.contactContainer}
+    >
       <h2>Mande um oi, ligamos para você!</h2>
       <p>Preencha seus dados para que a gente possa entrar em contato.</p>
 

@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <section className={`${styles.aboutUsContainer} aboutUsContainer-dark`}>
       <div className={styles.aboutUsContent}>
-        <div>
+        <div data-aos='fade-up'>
           <h2>Nossa iniciativa</h2>
           <p>
             Somos desenvolvedores que se dedicam a fazer projetos perfeitos e
@@ -16,7 +16,7 @@ const AboutUs = () => {
         </div>
 
         <picture>
-          <img src={manThinking} alt='a man thinking' />
+          <img data-aos='fade-left' src={manThinking} alt='a man thinking' />
         </picture>
       </div>
     </section>

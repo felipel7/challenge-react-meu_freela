@@ -14,19 +14,31 @@ const Header = () => {
         <a href='/'>MeuFreela</a>
         <ul className={isOpen ? `${styles.active}` : ''}>
           <li>
-            <a href='https://www.linkedin.com' title='linkedin profile'>
+            <a
+              href='https://www.linkedin.com'
+              target='_blank'
+              title='linkedin profile'
+            >
               <FaLinkedinIn size={32} />
               <span>Linkedin</span>
             </a>
           </li>
           <li>
-            <a href='https://www.instagram.com' title='instagram profile'>
+            <a
+              href='https://www.instagram.com'
+              target='_blank'
+              title='instagram profile'
+            >
               <FaInstagram size={32} />
               <span>Instagram</span>
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com' title='twitter profile'>
+            <a
+              href='https://www.twitter.com'
+              target='_blank'
+              title='twitter profile'
+            >
               <FaTwitter size={32} />
               <span>Twitter</span>
             </a>
