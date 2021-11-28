@@ -52,8 +52,8 @@
       opacity: 0;
 
       > a {
-        display: flex;
         align-items: flex-end;
+        display: flex;
         justify-content: center;
 
         color: #fff;
@@ -68,8 +68,8 @@
 
           > span {
             display: inline-block;
-            margin-left: 1.5rem;
             font-size: 1.8rem;
+            margin-left: 1.5rem;
           }
         }
       }
@@ -80,7 +80,7 @@
     }
   }
 
-  @media screen and (min-width: 420px) {
+  @media screen and (min-width: 520px) {
     > ul,
     > ul.active {
       position: initial;
@@ -104,6 +104,10 @@
             display: none;
           }
         }
+      }
+
+      .toggleTheme {
+        display: initial;
       }
     }
 

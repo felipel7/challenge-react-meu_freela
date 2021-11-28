@@ -1,18 +1,18 @@
 .contactContainer {
-  height: 38.1rem;
   margin: 0 auto;
   max-width: 1020px;
-  padding: 0 1.6rem;
+  padding: 7rem 1.6rem 8rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
-  @media screen and(max-width: 720px) {
-    margin-bottom: 12rem;
+  @media screen and(max-width: 780px) {
+    > h2 {
+      font-size: 4.5rem;
+    }
   }
 
-  p {
+  > p {
     margin: 2.1rem 0 4rem;
   }
 
@@ -21,8 +21,8 @@
     flex-direction: column;
     gap: 2.2rem;
 
-    @media screen and (min-width: 720px) {
-      align-items: flex-end;
+    @media screen and (min-width: 780px) {
+      align-items: flex-start;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -30,23 +30,33 @@
     .formControl {
       flex: 1;
 
-      label {
+      > label {
         display: block;
         font-size: 1.4rem;
         font-weight: bold;
         line-height: 1.5;
       }
 
-      input {
+      > input {
         width: 100%;
+
+        &.error {
+          border: 1px solid tomato;
+        }
+      }
+
+      > span {
+        color: tomato;
+        font-size: 1.7rem;
       }
     }
 
-    button {
+    > button {
       background: #10ac84;
+      margin-top: 2rem;
       max-width: 30rem;
 
-      @media screen and(max-width: 720px) {
+      @media screen and(max-width: 780px) {
         align-self: center;
       }
     }

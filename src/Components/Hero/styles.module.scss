@@ -26,11 +26,10 @@
 
 .heroHeading {
   position: absolute;
-  top: 30rem;
+  top: 24rem;
 
-  margin-left: 6rem;
-  max-width: 75.6rem;
-  max-height: 18.8rem;
+  padding: 5.75rem;
+  max-width: 87rem;
   z-index: 1;
 
   > p {
@@ -39,7 +38,18 @@
 
   > button {
     background: $color-accent;
-    max-width: 29rem;
     margin: 4rem 0 0 1.2rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    padding: 1rem;
+
+    > p {
+      font-size: 1.8rem;
+    }
+
+    > h1 {
+      font-size: 6rem;
+    }
   }
 }
