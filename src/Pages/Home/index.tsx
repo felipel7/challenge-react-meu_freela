@@ -5,12 +5,14 @@ import { Footer } from '../../Components/Footer';
 
 const Home = () => {
   return (
-    <main>
-      <Hero />
-      <AboutUs />
-      <Contact />
+    <>
+      <main>
+        <Hero />
+        <AboutUs />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

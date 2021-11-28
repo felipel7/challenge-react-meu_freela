@@ -3,7 +3,7 @@ import manThinking from '../../assets/images/thinking.webp';
 
 const AboutUs = () => {
   return (
-    <section className={styles.aboutUsContainer}>
+    <section className={`${styles.aboutUsContainer} aboutUsContainer-dark`}>
       <div className={styles.aboutUsContent}>
         <div>
           <h2>Nossa iniciativa</h2>

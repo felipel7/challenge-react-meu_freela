@@ -1,13 +1,15 @@
 import { Header } from './Components/Header';
 import { Home } from './Pages/Home';
 
-const App = () => {
+import { ThemeProvider } from './contexts/ThemeProvider';
+
+function App() {
   return (
-    <div>
+    <ThemeProvider>
       <Header />
       <Home />
-    </div>
+    </ThemeProvider>
   );
-};
+}
 
 export { App };

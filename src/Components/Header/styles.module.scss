@@ -1,7 +1,5 @@
-@import '../../styles/global.scss';
-
 .headerContainer {
-  background: linear-gradient(180deg, $color-accent 0%, #d92223 100%);
+  background: linear-gradient(180deg, #ee5253 0%, #d92223 100%);
 }
 
 .headerContent {
@@ -13,9 +11,10 @@
   padding: 0 2rem;
   width: 100%;
 
-  h3 {
+  > a {
+    color: #fff;
     font-size: 3rem;
-    color: $color-text-light;
+    font-weight: 700;
   }
 
   > ul {

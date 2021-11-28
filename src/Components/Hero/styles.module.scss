@@ -3,7 +3,7 @@
 .heroContainer {
   position: relative;
   height: 94.6rem;
-  color: $color-text-light;
+  color: #fff;
 
   &::after {
     position: absolute;
@@ -26,9 +26,7 @@
 
 .heroHeading {
   position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30rem;
 
   margin-left: 6rem;
   max-width: 75.6rem;

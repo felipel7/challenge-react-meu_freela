@@ -1,4 +1,5 @@
 import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+import ThemeSetter from '../ThemeSetter';
 
 import styles from './styles.module.scss';
 
@@ -6,8 +7,7 @@ const Header = () => {
   return (
     <header className={styles.headerContainer}>
       <nav className={styles.headerContent}>
-        <h3>MeuFreela</h3>
-
+        <a href='/'>MeuFreela</a>
         <ul>
           <li>
             <a href='https://www.linkedin.com' title='linkedin profile'>
@@ -23,6 +23,9 @@ const Header = () => {
             <a href='https://www.twitter.com' title='twitter profile'>
               <FaTwitter size={32} />
             </a>
+          </li>
+          <li>
+            <ThemeSetter />
           </li>
         </ul>
       </nav>

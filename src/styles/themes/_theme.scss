@@ -1,0 +1,53 @@
+// Light
+$light-background: #fff;
+$light-footer-bg: #eaeaea;
+$light-label: #666;
+$light-text-color: #333;
+$light-placeholder: #bbb;
+
+// Dark
+$dark-background: #333;
+$dark-footer-bg: #232323;
+$dark-label: #aaa;
+$dark-text-color: #fff;
+$dark-placeholder: #777;
+
+$themes: (
+  light: (
+    main-background: $light-background,
+    footer-background: $light-footer-bg,
+    label-color: $light-label,
+    text-color: $light-text-color,
+    placeholder-color: $light-placeholder,
+  ),
+  dark: (
+    main-background: $dark-background,
+    footer-background: $dark-footer-bg,
+    label-color: $dark-label,
+    text-color: $dark-text-color,
+    placeholder-color: $dark-placeholder,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

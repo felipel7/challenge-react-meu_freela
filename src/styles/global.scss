@@ -1,5 +1,5 @@
-$color-text-light: #fff;
-$color-text-dark: #333;
+@import './themes/theme';
+
 $color-accent: #ee5253;
 
 // Soft reset
@@ -10,7 +10,9 @@ $color-accent: #ee5253;
 }
 
 ::placeholder {
-  color: #bbb;
+  @include themed() {
+    color: t('placeholder-color');
+  }
 }
 
 html {
@@ -21,8 +23,9 @@ html {
 body,
 button,
 input {
-  color: $color-text-dark;
-  font-family: 'Roboto', sans-serif;
+  background: $light-background;
+  color: $light-text-color;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -34,7 +37,7 @@ h1,
 h2,
 h3 {
   font-size: 8rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h2 {
@@ -45,21 +48,34 @@ h2 {
 button {
   border-radius: 8px;
   border: none;
-  color: $color-text-light;
+  color: #fff;
   cursor: pointer;
   line-height: 1.2;
   max-height: 6rem;
-  outline: none;
   overflow: hidden;
   padding: 1.6rem 6rem;
   transition: background-color 0.3s;
   white-space: nowrap;
+  transition: filter 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(0.85);
+  }
 }
 
 // Links
 a {
-  color: $color-text-light;
+  color: #fff;
   text-decoration: none;
+  transition: filter 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 }
 
 // Inputs
@@ -71,4 +87,42 @@ input {
   line-height: 3rem;
   padding: 1.4rem;
   flex: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include themed() {
+    background: t('main-background');
+    color: t('text-color');
+  }
+}
+
+// Light/Dark mode
+main {
+  @include themed() {
+    background: t('main-background');
+    color: t('text-color');
+  }
+}
+
+footer {
+  @include themed() {
+    background: t('footer-background');
+    color: t('text-color');
+  }
+}
+
+form {
+  > label {
+    @include themed() {
+      color: t('label-color');
+    }
+  }
+}
+
+.aboutUsContainer-dark::after {
+  @include themed() {
+    background: t('footer-background');
+  }
 }
