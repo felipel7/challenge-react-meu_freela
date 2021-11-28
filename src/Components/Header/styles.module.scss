@@ -3,26 +3,112 @@
 }
 
 .headerContent {
+  position: relative;
+
   align-items: center;
   display: flex;
   justify-content: space-between;
 
+  font-weight: 700;
   height: 80px;
   padding: 0 2rem;
   width: 100%;
 
-  > a {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 700;
+  > ul {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(#000, 0.7);
+    list-style: none;
+    overflow: hidden;
+    height: 100vh;
+    width: 0;
+    transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
+    z-index: 5;
+
+    &.active {
+      width: 50%;
+
+      > li {
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.06s;
+          }
+        }
+      }
+    }
+
+    > li {
+      margin: 2rem;
+      transform: translateX(150%);
+      opacity: 0;
+
+      > a {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        color: #fff;
+        font-size: 3rem;
+
+        > span {
+          display: none;
+        }
+
+        @media screen and (min-width: 320px) {
+          justify-content: flex-start;
+
+          > span {
+            display: inline-block;
+            margin-left: 1.5rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .toggleTheme {
+      display: none;
+    }
   }
 
-  > ul {
-    display: flex;
-    list-style: none;
+  @media screen and (min-width: 420px) {
+    > ul,
+    > ul.active {
+      position: initial;
 
-    li + li {
-      margin-left: 2rem;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+
+      background: transparent;
+      height: 100%;
+      width: 100%;
+
+      > li {
+        margin: 0;
+        opacity: 1;
+        transform: translateX(0);
+
+        > a {
+          > span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    > span {
+      display: none;
     }
   }
 }
