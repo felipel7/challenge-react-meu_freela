@@ -8,13 +8,15 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "formik": "^2.2.9",
     "hamburger-react": "^2.4.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-icons": "^4.3.1",
     "react-switch": "^6.0.0",
     "react-toastify": "^8.1.0",
-    "sass": "^1.43.5"
+    "sass": "^1.43.5",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",

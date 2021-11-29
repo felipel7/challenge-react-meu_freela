@@ -15,50 +15,50 @@
   > p {
     margin: 2.1rem 0 4rem;
   }
+}
 
-  > form {
-    display: flex;
-    flex-direction: column;
-    gap: 2.2rem;
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
 
-    @media screen and (min-width: 780px) {
-      align-items: flex-start;
-      flex-direction: row;
-      justify-content: space-between;
+  @media screen and (min-width: 780px) {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .formControl {
+    flex: 1;
+
+    > label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.5;
     }
 
-    .formControl {
-      flex: 1;
+    > input {
+      width: 100%;
 
-      > label {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: bold;
-        line-height: 1.5;
-      }
-
-      > input {
-        width: 100%;
-
-        &.error {
-          border: 1px solid tomato;
-        }
-      }
-
-      > span {
-        color: tomato;
-        font-size: 1.7rem;
+      &.error {
+        border: 1px solid tomato;
       }
     }
 
-    > button {
-      background: #10ac84;
-      margin-top: 2rem;
-      max-width: 30rem;
+    > span {
+      color: tomato;
+      font-size: 1.7rem;
+    }
+  }
 
-      @media screen and(max-width: 780px) {
-        align-self: center;
-      }
+  > button {
+    background: #10ac84;
+    margin-top: 2rem;
+    max-width: 30rem;
+
+    @media screen and(max-width: 780px) {
+      align-self: center;
     }
   }
 }
