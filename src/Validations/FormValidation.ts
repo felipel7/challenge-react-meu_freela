@@ -9,10 +9,10 @@ const formSchema = yup.object().shape({
   phone: yup
     .string()
     .required('Campo obrigatório!')
-    .min(8, '')
+    .min(8, ' ')
     .matches(
       /^\(?\d{2}\)? ?([2-9]|\d{9}) ?\d{4}-? ?\d{4}$/,
-      'O número deve ter o seguinte formato: 99 99999 9999'
+      'Deve ter o formato: 99 99999 9999'
     ),
 });
 

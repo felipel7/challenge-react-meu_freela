@@ -8,9 +8,9 @@ const Hero = () => {
       <figcaption data-aos='zoom-in-up' className={styles.heroHeading}>
         <p>Desenvolvedores prontos para ação</p>
         <h1>Seu projeto pronto na velocidade da luz</h1>
-        <button type='button'>
-          <a href='#form'>Peça uma reunião</a>
-        </button>
+        <a href='#form' style={{ background: 'black' }}>
+          <button type='button'>Peça uma reunião</button>
+        </a>
       </figcaption>
     </figure>
   );

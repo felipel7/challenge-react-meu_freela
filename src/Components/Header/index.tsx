@@ -44,7 +44,10 @@ const Header = () => {
             </a>
           </li>
           <li className={styles.toggleTheme}>
-            <ThemeSetter />
+            <div>
+              <ThemeSetter />
+              <span>Trocar o tema</span>
+            </div>
           </li>
         </ul>
         <span onClick={() => setIsOpen(!isOpen)}>

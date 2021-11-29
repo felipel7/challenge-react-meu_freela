@@ -22,21 +22,25 @@
     display: flex;
     flex-direction: column;
 
-    background: rgba(#000, 0.7);
+    background: rgba(#000, 0.95);
     list-style: none;
-    overflow: hidden;
     height: 100vh;
     width: 0;
     transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
     z-index: 5;
 
+    li:last-child {
+      transform: translateX(37rem);
+      opacity: 0;
+    }
+
     &.active {
-      width: 50%;
+      width: 60%;
 
       > li {
         opacity: 1;
         transform: translateX(0);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in;
 
         @for $i from 1 through 6 {
           &:nth-child(#{$i}) {
@@ -51,7 +55,8 @@
       transform: translateX(150%);
       opacity: 0;
 
-      > a {
+      > a,
+      & > div {
         align-items: flex-end;
         display: flex;
         justify-content: center;
@@ -61,6 +66,7 @@
 
         > span {
           display: none;
+          white-space: nowrap;
         }
 
         @media screen and (min-width: 320px) {
@@ -73,10 +79,6 @@
           }
         }
       }
-    }
-
-    .toggleTheme {
-      display: none;
     }
   }
 
@@ -105,13 +107,10 @@
           }
         }
       }
-
-      .toggleTheme {
-        display: initial;
-      }
     }
 
-    > span {
+    > span,
+    .toggleTheme {
       display: none;
     }
   }
