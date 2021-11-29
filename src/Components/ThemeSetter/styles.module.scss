@@ -1,0 +1,47 @@
+.themeSetterContainer {
+  display: flex;
+  align-items: flex-end;
+  height: 2.5rem;
+
+  label {
+    position: relative;
+
+    background: #cacaca;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    height: 2.5rem;
+    width: 5rem;
+
+    &::after {
+      position: absolute;
+      left: 0.25rem;
+      top: 0.25rem;
+
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background: #fff;
+      border-radius: 2rem;
+      transition: ease-in 0.3s;
+    }
+
+    &:active::after {
+      width: 2rem;
+    }
+  }
+
+  > input[type='checkbox'] {
+    visibility: hidden;
+    position: absolute;
+
+    &:checked + label {
+      background: #444;
+
+      &::after {
+        left: calc(100% - 0.25rem);
+        transform: translateX(-100%);
+      }
+    }
+  }
+}

@@ -1,31 +1,25 @@
-import { useContext } from 'react';
-import { MdDarkMode, MdOutlineWbSunny } from 'react-icons/md';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import Switch from 'react-switch';
+
+import styles from './styles.module.scss';
 
 export default function ThemeSetter() {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const handleThemeToggle = () => {
+  const handleChange = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   };
 
   return (
-    <Switch
-      checked={theme === 'light'}
-      onChange={handleThemeToggle}
-      onColor='#e6e6e6'
-      checkedIcon={
-        <MdOutlineWbSunny
-          size={20}
-          style={{ margin: '4.5px' }}
-          color={'#666'}
-        />
-      }
-      uncheckedIcon={
-        <MdDarkMode size={20} style={{ margin: '4.5px' }} color={'#333'} />
-      }
-    />
+    <div className={styles.themeSetterContainer}>
+      <input
+        type='checkbox'
+        id='switch'
+        checked={theme === 'dark'}
+        onChange={handleChange}
+      />
+      <label htmlFor='switch' />
+    </div>
   );
 }
