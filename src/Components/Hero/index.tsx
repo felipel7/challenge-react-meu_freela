@@ -8,7 +8,7 @@ const Hero = () => {
       <figcaption data-aos='zoom-in-up' className={styles.heroHeading}>
         <p>Desenvolvedores prontos para ação</p>
         <h1>Seu projeto pronto na velocidade da luz</h1>
-        <a href='#form' style={{ background: 'black' }}>
+        <a href='#form'>
           <button type='button'>Peça uma reunião</button>
         </a>
       </figcaption>

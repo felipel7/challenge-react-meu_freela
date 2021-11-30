@@ -57,6 +57,10 @@
     margin-top: 2rem;
     max-width: 30rem;
 
+    &[disabled] {
+      cursor: not-allowed;
+    }
+
     @media screen and(max-width: 780px) {
       align-self: center;
     }

@@ -14,19 +14,14 @@ const Contact = () => {
     values: FormValues,
     actions: FormikHelpers<FormValues>
   ) => {
-    try {
-      // Promise =>  p/ fazer o submit do form/values ao servidor
-      new Promise<void>(res => {
-        setTimeout(() => {
-          console.log(values);
-          res();
-        }, 1500);
-      });
-      toast.success('Dados enviados com sucesso! :)');
-    } catch (e) {
-      toast.error('Houve um erro! :( Tente novamente');
-      console.log(e);
-    }
+    new Promise<void>(res => {
+      setTimeout(() => {
+        console.log(values);
+        res();
+      }, 500);
+    })
+      .then(_ => toast.success('Dados enviados com sucesso! :)'))
+      .catch(_ => toast.error('Houve um erro, tente novamente!'));
 
     actions.resetForm();
   };
@@ -47,7 +42,7 @@ const Contact = () => {
         }}
         onSubmit={handleSubmit}
       >
-        {({ errors, isValidating, isSubmitting }) => (
+        {({ errors, isValidating, isSubmitting, isValid }) => (
           <Form>
             <div className={styles.formContent}>
               <div className={styles.formControl}>
@@ -71,7 +66,14 @@ const Contact = () => {
                 />
                 {errors && <span>{errors.phone}</span>}
               </div>
-              <button type='submit' disabled={isValidating || isSubmitting}>
+              <button
+                type='submit'
+                disabled={isValidating || isSubmitting}
+                onClick={() => {
+                  if (errors.name || errors.phone)
+                    toast.error('Confira os dados novamente!');
+                }}
+              >
                 Peça uma reunião
               </button>
             </div>

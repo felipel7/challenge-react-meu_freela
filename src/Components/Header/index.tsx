@@ -18,6 +18,7 @@ const Header = () => {
               href='https://www.linkedin.com'
               target='_blank'
               title='linkedin profile'
+              rel='noreferrer'
             >
               <FaLinkedinIn size={32} />
               <span>Linkedin</span>
@@ -28,6 +29,7 @@ const Header = () => {
               href='https://www.instagram.com'
               target='_blank'
               title='instagram profile'
+              rel='noreferrer'
             >
               <FaInstagram size={32} />
               <span>Instagram</span>
@@ -38,6 +40,7 @@ const Header = () => {
               href='https://www.twitter.com'
               target='_blank'
               title='twitter profile'
+              rel='noreferrer'
             >
               <FaTwitter size={32} />
               <span>Twitter</span>
