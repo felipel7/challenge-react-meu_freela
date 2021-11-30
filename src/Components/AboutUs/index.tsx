@@ -15,8 +15,8 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <picture data-aos='fade-left'>
-          <img src={manThinking} alt='a man thinking' />
+        <picture>
+          <img data-aos='fade-left' src={manThinking} alt='a man thinking' />
         </picture>
       </div>
     </section>

@@ -10,7 +10,7 @@
 
 ![App Screenshot](https://live.staticflickr.com/65535/51714402534_ae1f9b589d_b.jpg)
 
-[Demo Here](https://meu-freela-ppijp6p7m-felipel7.vercel.app/)
+[Demo on Vercel, click here.](https://meu-freela.vercel.app/)
 
 ## :rocket: Technologies
 
@@ -44,7 +44,7 @@ $ yarn dev
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](https://https://github.com/felipel7/meu-freela/blob/main/LICENSE) for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/felipel7/meu-freela/blob/main/LICENSE) for more information.
 
 ---
 
