@@ -1,117 +1,124 @@
 .headerContainer {
+  position: fixed;
+  top: 0;
   background: linear-gradient(180deg, #ee5253 0%, #d92223 100%);
 
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-
-  font-weight: 700;
   font-size: 3rem;
-  padding: 0 2.2rem;
+  font-weight: 700;
   height: 8rem;
   width: 100%;
+  padding: 0 2.2rem;
+  z-index: 5;
 
-  > ul {
-    position: absolute;
-    right: 0;
-    top: 8rem;
-
+  > nav {
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    background: rgba(#000, 0.95);
-    font-weight: 400;
-    list-style: none;
-    overflow-x: hidden;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
 
-    height: 100vh;
-    width: 0;
-    z-index: 2;
-    transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
+    ul {
+      position: absolute;
+      right: 0;
+      top: 8rem;
 
-    li:last-child {
-      transform: translateX(36rem);
-    }
+      display: flex;
+      flex-direction: column;
 
-    &.active {
-      width: 60%;
+      background: rgba(#000, 0.95);
+      font-weight: 400;
+      list-style: none;
+      overflow-x: hidden;
 
-      > li {
-        transform: translateX(0);
-        transition: transform 0.3s ease-in;
+      height: 100vh;
+      width: 0;
 
-        @for $i from 1 through 6 {
-          &:nth-child(#{$i}) {
-            transition-delay: $i * 0.06s;
+      transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
+
+      li:last-child {
+        transform: translateX(36rem);
+      }
+
+      &.active {
+        width: 60%;
+
+        li {
+          transform: translateX(0);
+          transition: transform 0.3s ease-in;
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              transition-delay: $i * 0.06s;
+            }
           }
         }
       }
-    }
 
-    > li {
-      margin: 2rem;
-      transform: translateX(150%);
-      transition: transform 0.2s ease-in-out;
+      li {
+        margin: 2rem;
+        transform: translateX(150%);
+        transition: transform 0.2s ease-in-out;
 
-      > a,
-      & > div {
-        align-items: flex-end;
-        display: flex;
-        justify-content: center;
+        & > div,
+        a {
+          align-items: flex-end;
+          display: flex;
+          justify-content: center;
+          color: #fff;
 
-        color: #fff;
-        font-size: 3rem;
-
-        > span {
-          display: none;
-          white-space: nowrap;
-        }
-
-        @media screen and (min-width: 320px) {
-          justify-content: flex-start;
-
-          > span {
-            display: inline-block;
-            font-size: 1.8rem;
-            margin-left: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 520px) {
-    > ul {
-      position: initial;
-
-      align-items: center;
-      flex-direction: row;
-      flex: 1;
-      gap: 2rem;
-      justify-content: flex-end;
-
-      background: transparent;
-      height: 100%;
-
-      > li {
-        margin: 0;
-        transform: translateX(0);
-
-        &:hover {
-          transform: scale(1.1);
-        }
-
-        > a {
           > span {
             display: none;
+            white-space: nowrap;
+          }
+
+          @media screen and (min-width: 320px) {
+            justify-content: flex-start;
+
+            > span {
+              display: inline-block;
+              font-size: 1.8rem;
+              margin-left: 1.5rem;
+            }
           }
         }
       }
     }
 
-    > span,
-    .toggleTheme {
-      display: none;
+    @media screen and (min-width: 520px) {
+      ul {
+        position: initial;
+
+        align-items: center;
+        flex-direction: row;
+        flex: 1;
+        gap: 2rem;
+        justify-content: flex-end;
+
+        background: transparent;
+        height: 100%;
+
+        li {
+          margin: 0;
+          transform: translateX(0);
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          > a {
+            > span {
+              display: none;
+            }
+          }
+        }
+      }
+
+      > span,
+      .toggleTheme {
+        display: none;
+      }
     }
   }
 }

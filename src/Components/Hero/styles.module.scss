@@ -6,19 +6,18 @@
     url(../../assets/images/hero.webp) no-repeat fixed center;
   background-size: cover;
   height: 94.6rem;
-  padding-top: 29rem;
+  padding: 29rem 2.2rem 0;
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
-  max-width: 75rem;
-
-  padding: 0 2rem;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
 
   h1 {
-    font-size: 6rem;
+    font-size: 5.7rem;
+    max-width: 75rem;
   }
 
   span {
@@ -34,11 +33,14 @@
   a {
     align-self: center;
   }
+}
 
-  @media screen and (min-width: 520px) {
-    padding: 0;
-    margin-left: 6rem;
+@media screen and (min-width: 580px) {
+  .heroContainer {
+    padding: 29rem 6rem 0;
+  }
 
+  .heroContent {
     h1 {
       font-size: 8rem;
     }

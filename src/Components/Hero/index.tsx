@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 const Hero = () => {
   return (
     <section className={styles.heroContainer}>
-      <div data-aos='' className={styles.heroContent}>
+      <div data-aos='zoom-in' className={styles.heroContent}>
         <span>Desenvolvedores prontos para ação</span>
         <h1>Seu projeto pronto na velocidade da luz</h1>
         <a href='#form'>
