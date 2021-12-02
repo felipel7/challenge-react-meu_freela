@@ -31,7 +31,7 @@ input {
   -moz-osx-font-smoothing: grayscale;
 
   font-size: 2.2rem;
-  line-height: 1.2;
+  line-height: 1.175;
 }
 
 h1,
@@ -52,7 +52,6 @@ button {
   cursor: pointer;
   line-height: 1.2;
   max-height: 6rem;
-  overflow: hidden;
   padding: 1.6rem 6rem;
   transition: background-color 0.3s;
   white-space: nowrap;
@@ -63,7 +62,7 @@ button {
   }
 
   &:hover {
-    filter: brightness(0.85);
+    filter: brightness(0.9);
   }
 }
 
@@ -114,14 +113,14 @@ footer {
 }
 
 form {
-  > label {
+  label {
     @include themed() {
       color: t('label-color');
     }
   }
 }
 
-.aboutUsContainer-dark::after {
+.aboutUsContainerDark::after {
   @include themed() {
     background: t('footer-background');
   }
