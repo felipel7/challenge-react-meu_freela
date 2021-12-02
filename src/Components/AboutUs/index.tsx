@@ -3,7 +3,7 @@ import manThinking from '../../assets/images/thinking.webp';
 
 const AboutUs = () => {
   return (
-    <section className={`${styles.aboutUsContainer} aboutUsContainer-dark`}>
+    <section className={`${styles.aboutUsContainer} aboutUsContainerDark`}>
       <div className={styles.aboutUsContent}>
         <div data-aos='fade-up'>
           <h2>Nossa iniciativa</h2>
@@ -16,7 +16,7 @@ const AboutUs = () => {
         </div>
 
         <picture>
-          <img data-aos='fade-left' src={manThinking} alt='a man thinking' />
+          <img data-aos='fade-left' src={manThinking} alt='pessoa pensando' />
         </picture>
       </div>
     </section>
