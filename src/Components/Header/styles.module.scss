@@ -1,17 +1,14 @@
 .headerContainer {
   background: linear-gradient(180deg, #ee5253 0%, #d92223 100%);
-}
-
-.headerContent {
-  position: relative;
 
   align-items: center;
   display: flex;
   justify-content: space-between;
 
   font-weight: 700;
-  height: 80px;
-  padding: 0 2rem;
+  font-size: 3rem;
+  padding: 0 2.2rem;
+  height: 8rem;
   width: 100%;
 
   > ul {
@@ -23,22 +20,23 @@
     flex-direction: column;
 
     background: rgba(#000, 0.95);
+    font-weight: 400;
     list-style: none;
-    height: 100vh;
-    width: 0;
-    transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
-    z-index: 5;
     overflow-x: hidden;
 
+    height: 100vh;
+    width: 0;
+    z-index: 2;
+    transition: width 0.4s cubic-bezier(0.7, 0.3, 0.3, 1);
+
     li:last-child {
-      transform: translateX(37rem);
+      transform: translateX(36rem);
     }
 
     &.active {
       width: 60%;
 
       > li {
-        opacity: 1;
         transform: translateX(0);
         transition: transform 0.3s ease-in;
 
@@ -53,7 +51,7 @@
     > li {
       margin: 2rem;
       transform: translateX(150%);
-      opacity: 0;
+      transition: transform 0.2s ease-in-out;
 
       > a,
       & > div {
@@ -83,23 +81,25 @@
   }
 
   @media screen and (min-width: 520px) {
-    > ul,
-    > ul.active {
+    > ul {
       position: initial;
 
-      flex-direction: row;
-      justify-content: flex-end;
       align-items: center;
+      flex-direction: row;
+      flex: 1;
       gap: 2rem;
+      justify-content: flex-end;
 
       background: transparent;
       height: 100%;
-      width: 100%;
 
       > li {
         margin: 0;
-        opacity: 1;
         transform: translateX(0);
+
+        &:hover {
+          transform: scale(1.1);
+        }
 
         > a {
           > span {
