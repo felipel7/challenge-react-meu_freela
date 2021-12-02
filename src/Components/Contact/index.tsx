@@ -1,6 +1,7 @@
+import { ChangeEvent } from 'react';
 import { toast } from 'react-toastify';
 import { formSchema } from '../../Validations/FormValidation';
-import { Formik, Form, Field, FormikHelpers, ErrorMessage } from 'formik';
+import { Formik, Form, Field, FormikHelpers } from 'formik';
 
 import styles from './styles.module.scss';
 
@@ -27,11 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id='form'
-      data-aos='zoom-in-up'
-      className={styles.contactContainer}
-    >
+    <section id='form' data-aos='zoom-in-up' className={styles.formContainer}>
       <h2>Mande um oi, ligamos para você!</h2>
       <p>Preencha seus dados para que a gente possa entrar em contato.</p>
       <Formik
@@ -42,7 +39,7 @@ const Contact = () => {
         }}
         onSubmit={handleSubmit}
       >
-        {({ errors, isValidating, isSubmitting, isValid }) => (
+        {({ errors, handleChange, setFieldValue }) => (
           <Form>
             <div className={styles.formContent}>
               <div className={styles.formControl}>
@@ -63,12 +60,23 @@ const Contact = () => {
                   id='phone'
                   name='phone'
                   placeholder='(99) 99999-9999'
+                  maxLength={15}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                    handleChange(e);
+                    const value: string = e.target.value.replace(/\D/g, '');
+
+                    const phone = value.replace(
+                      /(..)(.....)(.*)/,
+                      '($1) $2-$3'
+                    );
+
+                    setFieldValue('phone', phone, false);
+                  }}
                 />
                 {errors && <span>{errors.phone}</span>}
               </div>
               <button
                 type='submit'
-                disabled={isValidating || isSubmitting}
                 onClick={() => {
                   if (errors.name || errors.phone)
                     toast.error('Confira os dados novamente!');
