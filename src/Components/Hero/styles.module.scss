@@ -16,12 +16,12 @@
   max-width: 1440px;
 
   h1 {
-    font-size: 5.7rem;
-    max-width: 75rem;
+    font-size: calc(3rem + ((1vw - 0.32rem) * 10.8696));
+    white-space: nowrap;
   }
 
   span {
-    font-size: 2.5rem;
+    font-size: calc(1.6rem + ((1vw - 0.32rem) * 2.8261));
     margin-bottom: 0.5rem;
   }
 
@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 780px) {
   .heroContainer {
     padding: 29rem 6rem 0;
   }

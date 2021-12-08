@@ -5,7 +5,9 @@ const Hero = () => {
     <section className={styles.heroContainer}>
       <div data-aos='zoom-in' className={styles.heroContent}>
         <span>Desenvolvedores prontos para ação</span>
-        <h1>Seu projeto pronto na velocidade da luz</h1>
+        <h1>
+          Seu projeto pronto <br /> na velocidade da luz
+        </h1>
         <a href='#form'>
           <button type='button'>Peça uma reunião</button>
         </a>
